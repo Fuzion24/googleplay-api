@@ -36,7 +36,8 @@ except:
     sys.exit(1)
 
 print_header_line()
-doc = message.doc[0]
-for c in doc.child:
+if len(message.doc) > 0:
+  doc = message.doc[0]
+  for c in doc.child:
     print_result_line(c)
 
